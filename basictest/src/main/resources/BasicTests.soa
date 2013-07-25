@@ -1,0 +1,9 @@
+name:   BasicTests
+defaultEnable: all
+primeData:
+    - org.anon.basictest.data.SimplePrimeData
+features:
+    - name: all
+      artefacts:
+        - org.anon.basictest.data.SimplePrimeData
+

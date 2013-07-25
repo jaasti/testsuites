@@ -1,0 +1,1 @@
+http://localhost:9081/PrimaryDataTest/PrimaryDataTest/CreatePrime?{'FlowAdmin':{'___smart_action___':'lookup','___smart_value___':'PrimaryDataTest'},'create':'PrimaryDataClass','data':{'num':11,'name':'name11','_float':'4.5','_Float':'5.6','_long':'100','_Long':'200','_Double':'23.45','_double':123.456}}

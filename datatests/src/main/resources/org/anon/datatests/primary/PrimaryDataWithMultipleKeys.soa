@@ -1,0 +1,14 @@
+name:   PrimaryDataWithMultipleKeys
+type:   PrimeData
+flow:   PrimaryDataTest
+attributes:
+    - attribute:    key1
+      type:         key
+    - attribute:    key2
+      type:         key
+states:
+    - name:         active
+      startState:   true
+    - name:         inactive
+      endState:     true
+

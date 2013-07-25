@@ -1,0 +1,12 @@
+name:   NestedDataClass
+type:   PrimeData
+flow:   PrimaryDataTest
+attributes:
+    - attribute:    key
+      type:         key
+states:
+    - name:         active
+      startState:   true
+    - name:         inactive
+      endState:     true
+

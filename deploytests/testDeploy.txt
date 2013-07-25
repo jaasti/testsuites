@@ -1,0 +1,6 @@
+http://localhost:9081/SmartOwner/AdminSmartFlow/DeployEvent?{'TenantAdmin':{'___smart_action___':'lookup','___smart_value___':'SmartOwner'},'deployJar':'/home/vjaasti/testJars/BasicTests.jar','flowsoa':'BasicTests.soa'}
+http://localhost:9081/SmartOwner/AdminSmartFlow/DeployEvent?{'TenantAdmin':{'___smart_action___':'lookup','___smart_value___':'SmartOwner'},'DeployJar':'TestDeploy.jar','flowsoa':'TestDeploy.soa'}
+http://localhost:9081/SmartOwner/AdminSmartFlow/DeployEvent?{'TenantAdmin':{'___smart_action___':'lookup','___smart_value___':'SmartOwner'},'DeployJar':'','flowsoa':'TestDeploy.soa'}
+http://localhost:9081/Smartowner/AdminSmartFlow/DeployEvent?{'TenantAdmin':{'___smart_action___':'lookup','___smart_value___':'SmartOwner'},'deployJar':'/home/vjaasti/testJars/BasicTests.jar','flowsoa':'BasicTests.soa'}
+http://localhost:9081/SmartOwner/Adminsmartflow/DeployEvent?{'TenantAdmin':{'___smart_action___':'lookup','___smart_value___':'SmartOwner'},'deployJar':'/home/vjaasti/testJars/BasicTests.jar','flowsoa':'BasicTests.soa'}
+http://localhost:9081/SmartOwner/AdminSmartFlow/Deploy?{'TenantAdmin':{'___smart_action___':'lookup','___smart_value___':'SmartOwner'},'deployJar':'/home/vjaasti/testJars/BasicTests.jar','flowsoa':'BasicTests.soa'}

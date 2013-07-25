@@ -1,0 +1,12 @@
+name:   NestedDataClassForUpdate
+type:   PrimeData
+flow:   UpdateDataTest
+attributes:
+    - attribute:    key
+      type:         key
+states:
+    - name:         active
+      startState:   true
+    - name:         inactive
+      endState:     true
+

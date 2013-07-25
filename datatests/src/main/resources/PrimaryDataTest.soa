@@ -1,0 +1,14 @@
+name:   PrimaryDataTest
+defaultEnable: all
+primeData:
+    - org.anon.datatests.primary.PrimaryDataClass
+    - org.anon.datatests.primary.PrimaryDataWithLists
+    - org.anon.datatests.primary.PrimaryDataWithMultipleKeys
+    - org.anon.datatests.primary.NestedDataClass
+features:
+    - name: all
+      artefacts:
+        - org.anon.datatests.primary.PrimaryDataClass
+        - org.anon.datatests.primary.PrimaryDataWithLists
+        - org.anon.datatests.primary.PrimaryDataWithMultipleKeys
+        - org.anon.datatests.primary.NestedDataClass

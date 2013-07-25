@@ -1,0 +1,8 @@
+name:   UpdateDataTest
+defaultEnable: all
+primeData:
+    - org.anon.datatests.primary.NestedDataClassForUpdate
+features:
+    - name: all
+      artefacts:
+        - org.anon.datatests.primary.NestedDataClassForUpdate

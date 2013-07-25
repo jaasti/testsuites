@@ -1,0 +1,12 @@
+name:   SimplePrimeData
+type:   PrimeData
+flow:   BasicTests
+attributes:
+    - attribute:    name
+      type:         key
+states:
+    - name:         active
+      startState:   true
+    - name:         inactive
+      endState:     true
+

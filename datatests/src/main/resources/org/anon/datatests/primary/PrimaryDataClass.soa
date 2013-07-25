@@ -1,0 +1,12 @@
+name:   PrimaryDataClass
+type:   PrimeData
+flow:   PrimaryDataTest
+attributes:
+    - attribute:    num
+      type:         key
+states:
+    - name:         active
+      startState:   true
+    - name:         inactive
+      endState:     true
+
