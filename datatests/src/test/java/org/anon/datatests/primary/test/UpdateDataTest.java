@@ -46,6 +46,7 @@ import java.util.List;
 import org.anon.smarttest.data.DataCleaner;
 import org.anon.smarttest.fw.BaseTest;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -57,8 +58,8 @@ public class UpdateDataTest extends BaseTest
         
     }
     
-    //@Before
-    public void setup()
+    @BeforeClass
+    public static void setupTest()
         throws Exception
     {
         
@@ -73,7 +74,6 @@ public class UpdateDataTest extends BaseTest
         throws Exception
     {
         accessor.cleanAllDataFor(tenantName);
-        setup();
         List<String> responses = runTest();
         System.out.println("responses:"+responses);
         

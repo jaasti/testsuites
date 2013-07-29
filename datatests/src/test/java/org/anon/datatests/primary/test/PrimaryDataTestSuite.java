@@ -47,7 +47,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-    //PrimaryDataTest.class,
+    PrimaryDataTest.class,
     UpdateDataTest.class
 })
 public class PrimaryDataTestSuite

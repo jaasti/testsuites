@@ -45,6 +45,8 @@ import java.util.List;
 
 import org.anon.smarttest.fw.BaseTest;
 import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class DeployTests extends BaseTest
@@ -56,6 +58,11 @@ public class DeployTests extends BaseTest
         // TODO Auto-generated constructor stub
     }
     
+    @BeforeClass
+    public static void setupTests()
+    {
+        setup("DeployTests");
+    }
     @Test
     public void testDeploy() 
         throws Exception 

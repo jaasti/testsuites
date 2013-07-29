@@ -62,17 +62,29 @@ public class PrimaryDataTest extends BaseTest
         
     }
     
-    @Before
-    public void setup()
+    /*@Before
+    public void setupTestCase()
         throws Exception
     {
         deployStandardJar();
         createTenantForTestCase();
         System.out.println("Deployed jar and created tenant:"+tenantName);
 
-    }
+    }*/
     
-   //@Test
+    @BeforeClass
+    public static void setupTests()
+        throws Exception
+    {
+        setup("PrimaryDataTest");
+        deployStandardJar();
+        createTenantForTestCase();
+        System.out.println("Deployed jar and created tenant:"+tenantName);
+
+    }
+
+    
+    @Test
     public void testPrimaryDataCreation()
         throws Exception
     {
@@ -88,6 +100,7 @@ public class PrimaryDataTest extends BaseTest
         assertTrue(resultMap.entrySet().size() > 0);
         
         resp = lookupFor("PrimaryDataClass", "10");
+        assertTrue(resp.size() > 0);
         String obj = resp.get(0);
         System.out.println("Obj created:"+obj);
         assertTrue(obj.contains("name10"));
@@ -95,7 +108,7 @@ public class PrimaryDataTest extends BaseTest
         //assertTrue(obj.contains("4.5"));
     }
     
-    //@Test
+    @Test
     public void testPrimaryDataWithListsCreation()
         throws Exception
     {
@@ -107,6 +120,7 @@ public class PrimaryDataTest extends BaseTest
         assertTrue(resultMap.entrySet().size() > 0);
         
         resp = lookupFor("PrimaryDataWithLists", "list1");
+        assertTrue(resp.size() > 0);
         String obj = resp.get(0);
         System.out.println("Obj created:"+obj);
         assertTrue(obj.contains("Apple"));
@@ -114,7 +128,7 @@ public class PrimaryDataTest extends BaseTest
         assertTrue(obj.contains("[1.2,3.4]"));
     }
     
-    //@Test
+    @Test
     public void testPrimaryDataWithMultipleKeys()
         throws Exception
     {
@@ -144,7 +158,7 @@ public class PrimaryDataTest extends BaseTest
         
         resp = lookupFor(grp, "key1");
         System.out.println("Got Nested Obj:"+resp);
-        assertTrue(resp.contains("dummy"));
+        assertTrue(resp.get(0).contains("dummy"));
         
     }
 }

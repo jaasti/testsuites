@@ -69,5 +69,7 @@
 		<module>deploytests</module>
 		<module>tenanttests</module>
 		<module>datatests</module>
+		
+		<module>bootstrap</module>
 	</modules>
 </project>

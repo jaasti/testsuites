@@ -45,6 +45,7 @@ import java.util.List;
 
 import org.anon.smarttest.fw.BaseTest;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -56,6 +57,11 @@ public class TenantAdminTest extends BaseTest
         super("TenantAdminTestSuite");
     }
     
+    @BeforeClass
+    public static void setupTests()
+    {
+        setup("TenantAdminTest");
+    }
     @Test
     public void testTenantCreation() throws Exception {
 

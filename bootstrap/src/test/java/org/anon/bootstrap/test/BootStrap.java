@@ -26,10 +26,10 @@
  * ************************************************************
  * HEADERS
  * ************************************************************
- * File:                org.anon.basictest.test.BasicTests
+ * File:                org.anon.bootstrap.test.BootStrap
  * Author:              vjaasti
  * Revision:            1.0
- * Date:                Jul 18, 2013
+ * Date:                Jul 29, 2013
  *
  * ************************************************************
  * REVISIONS
@@ -39,63 +39,36 @@
  * ************************************************************
  * */
 
-package org.anon.basictest.test;
+package org.anon.bootstrap.test;
 
 import java.util.List;
 
-import javax.ws.rs.core.Context;
-
 import org.anon.smarttest.fw.BaseTest;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.notification.RunListener;
 
-public class BasicTests extends BaseTest
+
+public class BootStrap extends BaseTest
 {
-    public BasicTests()
+
+    public BootStrap()
     {
-        super("BasicSmartTestSuite");
+        super("BootstrapSuite");
+        // TODO Auto-generated constructor stub
     }
-    
+
     @BeforeClass
-    public static void setupTests()
+    public static void setupTest()
     {
-        setup("BasicTests");
-    }
-    @Test
-    public void testBasics()
-        throws Exception
-    {
-        testDeployment();
-        testTenantCreation();
-        testCreatePrimeData();
-    }
-    
-    public void testDeployment() 
-        throws Exception
-    {
-       List<String> resp = deployStandardJar();
-       System.out.println("Resp for deploy:"+resp);
-       assertSuccess(resp.get(0));
-        
-    }
-    
-    
-    @Test
-    public void testCreatePrimeData() 
-        throws Exception
-    {
-        List<String> resp =  postTo(host, tenantName, flowName, "CreatePrime",  "{'FlowAdmin':{'___smart_action___':'lookup', '___smart_value___':'"+flowName+"'}, 'create':'SimplePrimeData', 'data':{'name':'addedsome'}}");
-        System.out.println("resp for create prime:"+resp);
-        assertSuccess(resp.get(0));
+        setup("BootStrap");
     }
     
     @Test
-    public void testTenantCreation()
+    public void bootstrapSMART()
         throws Exception
     {
-        List<String> resp = createTenantForTestCase();
-        System.out.println("resp for tenant creation:"+resp);
-        assertSuccess(resp.get(0));
+        List<String> resp = runTest();
+        System.out.println("Responses:"+resp);
     }
 }
